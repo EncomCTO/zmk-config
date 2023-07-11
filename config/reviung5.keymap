@@ -20,12 +20,19 @@
               label = "BASE";
               bindings = <
                 // ╭─────────────┬──────────────┬──────────────────┬─────────────┬─────────────╮
-                     &kp LG(LS(A))      &kp C_VOLUME_Down  &kp C_PLAY_PAUSE    &kp C_VOLUME_UP  &kp LG(LS(V))
+                     &mo BLE      &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT   &kp C_MUTE
                 // ╰─────────────┴──────────────┴──────────────────┴─────────────┴─────────────╯
               >;
               sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             };
 
-
+            ble_layer {
+              label = "BLE";
+              bindings = <
+                // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                     &trans     &out OUT_TOG   &bt BT_PRV    &bt BT_NXT    &bt BT_CLR
+                // ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
+              >;
+            };
         };
 };
